@@ -3,16 +3,16 @@ def convert_list_in_str(list_in: list) -> str:
         списка, являющегося числом, и дополняет нулём до двух целочисленных разрядов.
         Формирует из списка результирующую строковую переменную и возвращает."""
     # пишите реализацию своей программы здесь
-    i = 0
-    while i < len(my_list):
+
+    for i in range(len(my_list)):
         if my_list[i].isdigit() and int(my_list[i]) < 10:
             my_list[i] = f'"0{my_list[i]}"'
             i += 1
         elif my_list[i].isdigit() and int(my_list[i]) >= 10:
             my_list[i] = f'"{my_list[i]}"'
             i += 1
-        elif my_list[i] == '+5': # дайте пожалуйста наводку как найти в списке подобные элементы
-            my_list[i] = f'"{my_list[i]}"'
+        elif my_list[i][0] == '+': # дайте пожалуйста наводку как найти в списке подобные элементы
+            my_list[i] = f'"{my_list[i][0]}0{my_list[i][1]}"'
 
         else:
             i += 1
