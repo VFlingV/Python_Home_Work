@@ -1,14 +1,19 @@
+
+
 class Car:
     is_police: bool = False
 
     def __init__(self, speed: int, color: str, name: str):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        #self.is_police = polece
         """
         Конструктор класса
         :param speed: текущая скорость автомобиля
         :param color: цвет автомобиля
         :param name: название марки автомобиля
         """
-        pass  # опишите конструктор
 
     def go(self) -> None:
         """
@@ -41,10 +46,14 @@ class Car:
         :return: в stdout выводит сообщение формата
             '<название марки машины>: текущая скорость <значение текущей скорости> км/час'
         """
-        pass  # Ваш код здесь
+        print(f'{self.name}: текущая скорость {self.speed}')
 
 
 # определите классы TownCar, WorkCar, SportCar, PoliceCar согласно условия задания
+class TownCar(Car): ...
+class WorkCar(Car): ...
+class PoliceCar(Car): ...
+class SportCar(Car): ...
 
 
 if __name__ == '__main__':
