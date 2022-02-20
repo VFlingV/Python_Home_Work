@@ -22,7 +22,7 @@ class Road:
         :return: int значение тонн, дробная часть если есть НЕ учитывается
         """
 
-        return self._length * self._width * mass_m_2 * hight
+        return (self._length * self._width * mass_m_2 * hight) / 1000
 
 
 
