@@ -94,6 +94,4 @@ if __name__ == '__main__':
       ...
     ValueError: нераспознанное направление движения
     """
-save_direction = ['направо', 'налево', 'прямо', 'назад']
-save_direction_d = {'n': 'направо'}
-print(save_direction_d.get('п'))
+
