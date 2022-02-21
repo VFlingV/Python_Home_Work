@@ -76,6 +76,18 @@ print(f' {3 * "-//-"} '.join(map(str, [introduce_message, worker_info, type(intr
 # worker.working()
 print('\n')
 
-save_direction = ['направо', 'налево', 'прямо', 'назад']
-print(save_direction.count('направо'))
-save_direction_d = {'n': 'направо'}
+
+
+
+class Valer(ValueError):
+    pass
+
+def test(raw: str):
+    if not raw == 'право':
+        raise Valer(f'ошибка')
+
+try:
+    print(test('право'))
+    print('jr')
+except Valer as err:
+    print(f'{err}')

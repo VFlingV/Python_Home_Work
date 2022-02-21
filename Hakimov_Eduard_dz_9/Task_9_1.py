@@ -26,5 +26,3 @@ class TrafficLight:
 if __name__ == '__main__':
     traffic = TrafficLight()
     traffic.running()
-
-

@@ -46,11 +46,18 @@ class Car:
         :return: в stdout сообщение по формату
             '<название марки машины>: движется <direction>'
         """
-        save_direction = ['направо', 'налево', 'прямо', 'назад']
+
+        class Valerr(ValueError):...
+        def prof(direction: str):
+            save_turn = ['направо', 'налево', 'прямо', 'назад']
+            #if not direction == 'направо' or 'налево' or 'прямо' or 'назад':
+            if not save_turn.count(direction):
+                raise Valerr(f'нераспознанное направление движения')
         try:
+            prof(direction)
             print(f'{self.name}: движется {direction}')
-        except ValueError in ValueError:
-            print(f'нераспознанное направление движения ')
+        except Valerr as err:
+            print(f'{self.name}: {err}')
 
 
     def show_speed(self):
@@ -71,7 +78,10 @@ class TownCar(Car): ...
 class WorkCar(Car): ...
 class PoliceCar(Car): ...
 class SportCar(Car): ...
-class Veler(ValueError):...
+
+
+
+
 
 
 if __name__ == '__main__':
@@ -94,4 +104,3 @@ if __name__ == '__main__':
       ...
     ValueError: нераспознанное направление движения
     """
-
