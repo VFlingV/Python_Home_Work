@@ -9,8 +9,10 @@ class Stationery:
         # не дошло как реализовать вывод "Запуск отрисовки" кроме как через условие
         if self.__class__.__name__ == 'Pencil':
             print(f'Запуск отрисовки\n{self.__class__.__name__}:приступил к отрисовке объекта "{self.title_save}"')
+            #return f'Запуск отрисовки\n{self.__class__.__name__}:приступил к отрисовке объекта "{self.title_save}"'
         else:
             print(f'{self.__class__.__name__}:приступил к отрисовке объекта "{self.title_save}"')
+            #return f'{self.__class__.__name__}:приступил к отрисовке объекта "{self.title_save}"'
 
 
 # определите классы ниже согласно условий задания

@@ -75,3 +75,7 @@ introduce_message, worker_info = worker.introduce_yourself()
 print(f' {3 * "-//-"} '.join(map(str, [introduce_message, worker_info, type(introduce_message), type(worker_info)])))
 # worker.working()
 print('\n')
+
+save_direction = ['направо', 'налево', 'прямо', 'назад']
+print(save_direction.count('направо'))
+save_direction_d = {'n': 'направо'}
